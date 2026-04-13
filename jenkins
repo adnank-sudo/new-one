@@ -22,7 +22,6 @@ mvn sonar:sonar \
 -Dsonar.projectKey=studentdb \
 -Dsonar.projectName=studentdb \
 -Dsonar.host.url=http://3.110.125.10:9000 \
--Dsonar.token=sqp_2bfc3d418289064d027bad41e0c2a6e7a6bcd9b1
 '''
             }
         }
