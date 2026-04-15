@@ -25,6 +25,8 @@ withSonarQubeEnv(installationName: 'sonar' , credentialsId: 'sonar-token') {
 -Dsonar.host.url=http://172.31.20.43:9000
     '''
 }
+}
+}
  stages {
         stage(Quality Gate) {
             steps {
@@ -36,6 +38,6 @@ withSonarQubeEnv(installationName: 'sonar' , credentialsId: 'sonar-token') {
         }
                  
             }
-        }
+        
     }
 }
