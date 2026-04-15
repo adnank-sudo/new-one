@@ -16,14 +16,15 @@ pipeline {
         }
         stage('Test') {
             steps {
-              withSonarQubeEnv(installationName: 'sonar' , credentialsId: 'sonar-token') {
-    sh '''
+withSonarQubeEnv(installationName: 'sonar' , credentialsId: 'sonar-token') {
+   sh '''
     cd backend
     mvn sonar:sonar \
       -Dsonar.projectKey=studentdb \
       -Dsonar.projectName=studentdb \
     '''
 }
+                 
             }
         }
     }
