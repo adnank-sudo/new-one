@@ -27,14 +27,13 @@ withSonarQubeEnv(installationName: 'sonar' , credentialsId: 'sonar-token') {
 }
 }
 }
- stages {
-        stage(Quality Gate) {
+        stage('Quality Gate') {
             steps {
                 timeout(5) {
      waitForQualityGate abortPipeline: true, credentialsId: 'sonar-token'
 }
                
-            }
+            
         }
                  
             }
